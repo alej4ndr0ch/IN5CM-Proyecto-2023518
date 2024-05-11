@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alejandrocuxun.controllers.MenuDetalleCompraController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MenuDetalleCompra.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfDetalleCompraId" layoutX="26.0" layoutY="195.0" prefHeight="32.0" prefWidth="344.0" />
+      <TextField fx:id="tfCantidad" layoutX="26.0" layoutY="290.0" prefHeight="32.0" prefWidth="344.0" />
+      <TableView fx:id="tblDetalleCompra" layoutX="414.0" layoutY="155.0" prefHeight="478.0" prefWidth="730.0">
+        <columns>
+          <TableColumn fx:id="colDetalleCompraId" prefWidth="82.0" text="Detalle Compra Id" />
+          <TableColumn fx:id="colCantidad" prefWidth="142.0" text="Cantidad" />
+            <TableColumn fx:id="colProductoId" prefWidth="245.0" text="Producto Id" />
+            <TableColumn fx:id="colCompraId" prefWidth="260.0" text="Compra Id" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="58.0" layoutY="543.0" prefHeight="121.0" prefWidth="280.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="79.0" prefWidth="125.0" text="Guardar" />
+            <Button fx:id="btnVacio" layoutX="10.0" layoutY="31.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="125.0" text="Vacio" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnRegresar" layoutX="787.0" layoutY="667.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="303.0" text="Vaciar" />
+      <ChoiceBox fx:id="cmbProductoId" layoutX="26.0" layoutY="382.0" prefHeight="32.0" prefWidth="344.0" />
+      <ChoiceBox fx:id="cmbCompraId" layoutX="26.0" layoutY="475.0" prefHeight="32.0" prefWidth="344.0" />
+   </children>
+</AnchorPane>

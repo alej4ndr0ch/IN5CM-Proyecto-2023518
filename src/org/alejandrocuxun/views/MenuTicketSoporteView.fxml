@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="org.alejandrocuxun.controllers.MenuTicketSoporteController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MenuTicketSoporteFondo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfTicketId" layoutX="14.0" layoutY="178.0" prefHeight="35.0" prefWidth="280.0" />
+      <TextArea fx:id="taDescripcion" layoutX="23.0" layoutY="286.0" prefHeight="168.0" prefWidth="245.0" />
+      <ChoiceBox fx:id="cmbCliente" layoutX="450.0" layoutY="179.0" prefHeight="29.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="cmbFactura" layoutX="784.0" layoutY="179.0" prefHeight="29.0" prefWidth="200.0" />
+      <TableView fx:id="tblTickets" layoutX="450.0" layoutY="293.0" prefHeight="386.0" prefWidth="632.0">
+        <columns>
+          <TableColumn prefWidth="59.0" text="Ticket Id" />
+          <TableColumn prefWidth="196.0" text="Descripcion" />
+            <TableColumn prefWidth="71.0" text="Estatus" />
+            <TableColumn prefWidth="238.0" text="Cliente" />
+            <TableColumn prefWidth="67.0" text="FacturaId" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="cmbEstatus" layoutX="23.0" layoutY="525.0" prefHeight="29.0" prefWidth="200.0" />
+      <GridPane layoutX="23.0" layoutY="573.0" prefHeight="54.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="40.0" prefWidth="95.0" text="Guardar" />
+            <Button fx:id="btnVaciar" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="95.0" text="Vaciar Form" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnRegresar" layoutX="23.0" layoutY="679.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="189.0" text="Regresar" />
+   </children>
+</AnchorPane>

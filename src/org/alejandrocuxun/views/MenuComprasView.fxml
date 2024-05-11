@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alejandrocuxun.controllers.MenuComprasController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MenúCompras.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfCompraId" layoutX="889.0" layoutY="246.0" prefHeight="30.0" prefWidth="276.0" />
+      <TextField fx:id="tfFechaCompra" layoutX="889.0" layoutY="360.0" prefHeight="30.0" prefWidth="276.0" />
+      <TextField fx:id="tfTotalCompra" layoutX="889.0" layoutY="464.0" prefHeight="30.0" prefWidth="276.0" />
+      <GridPane layoutX="927.0" layoutY="540.0" prefHeight="98.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="54.0" prefWidth="93.0" text="Guardar" />
+            <Button fx:id="btnVaciar" layoutX="10.0" layoutY="32.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="93.0" text="Vaciar" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblCompras" layoutX="40.0" layoutY="176.0" prefHeight="473.0" prefWidth="733.0">
+        <columns>
+          <TableColumn fx:id="colCompraId" prefWidth="199.0" text="Compra Id" />
+          <TableColumn fx:id="colFechaCompra" prefWidth="320.0" text="Fecha Compra" />
+            <TableColumn fx:id="colTotalCompra" prefWidth="213.0" text="Total Compra" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnRegresar" layoutX="46.0" layoutY="680.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Regresar" />
+   </children>
+</AnchorPane>
