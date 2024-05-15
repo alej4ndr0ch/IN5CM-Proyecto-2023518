@@ -27,9 +27,7 @@ import org.alejandrocuxun.dao.Conexion;
 import org.alejandrocuxun.dto.ClienteDTO;
 import org.alejandrocuxun.models.Cliente;
 import org.alejandrocuxun.systems.Main;
-import org.alejandrocuxun.utils.SuperKinalAlert;
-import org.alejandrocuxun.controllers.FormClienteController;
-
+import org.alejandrocuxun.utils.SuperKinalAlert;    
 /**
  * FXML Controller class
  *

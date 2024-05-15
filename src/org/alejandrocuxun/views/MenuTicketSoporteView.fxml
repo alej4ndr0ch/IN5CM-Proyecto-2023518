@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="org.alejandrocuxun.controllers.MenuTicketSoporteController">
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alejandrocuxun.controllers.MenuTicketSoporteController">
    <children>
       <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,8 +22,6 @@
       </ImageView>
       <TextField fx:id="tfTicketId" layoutX="14.0" layoutY="178.0" prefHeight="35.0" prefWidth="280.0" />
       <TextArea fx:id="taDescripcion" layoutX="23.0" layoutY="286.0" prefHeight="168.0" prefWidth="245.0" />
-      <ChoiceBox fx:id="cmbCliente" layoutX="450.0" layoutY="179.0" prefHeight="29.0" prefWidth="200.0" />
-      <ChoiceBox fx:id="cmbFactura" layoutX="784.0" layoutY="179.0" prefHeight="29.0" prefWidth="200.0" />
       <TableView fx:id="tblTickets" layoutX="450.0" layoutY="293.0" prefHeight="386.0" prefWidth="632.0">
         <columns>
           <TableColumn prefWidth="59.0" text="Ticket Id" />
@@ -34,7 +31,6 @@
             <TableColumn prefWidth="67.0" text="FacturaId" />
         </columns>
       </TableView>
-      <ChoiceBox fx:id="cmbEstatus" layoutX="23.0" layoutY="525.0" prefHeight="29.0" prefWidth="200.0" />
       <GridPane layoutX="23.0" layoutY="573.0" prefHeight="54.0" prefWidth="200.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -49,5 +45,8 @@
          </children>
       </GridPane>
       <Button fx:id="btnRegresar" layoutX="23.0" layoutY="679.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="189.0" text="Regresar" />
+      <ComboBox layoutX="461.0" layoutY="183.0" prefHeight="25.0" prefWidth="209.0" />
+      <ComboBox layoutX="795.0" layoutY="183.0" prefHeight="25.0" prefWidth="209.0" />
+      <ComboBox layoutX="19.0" layoutY="519.0" prefHeight="25.0" prefWidth="209.0" />
    </children>
 </AnchorPane>

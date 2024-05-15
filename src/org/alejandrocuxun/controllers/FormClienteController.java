@@ -49,17 +49,17 @@ public class FormClienteController implements Initializable {
             if(op == 1){
                 if(!tfNombre.getText().equals("") && tfApellido.getText().equals("") && tfDireccion.getText().equals("")){
                     agregarCliente();
-                    SuperKinalAlert.getInstance().mostrarAlertaInfoemacion(400);
+                    SuperKinalAlert.getInstance().mostrarAlertaInformacion(400);
                     stage.menuClienteView();
                 }else{
-                    SuperKinalAlert.getInstance().mostrarAlertaInfoemacion(600);
+                    SuperKinalAlert.getInstance().mostrarAlertaInformacion(600);
                     tfNombre.requestFocus();
                 }
             }else if(op == 2){
                 if(!tfNombre.getText().equals("") && tfApellido.getText().equals("") && tfDireccion.getText().equals("")){
                     editarCliente();
                     ClienteDTO.getClienteDTO().setCliente(null);
-                    SuperKinalAlert.getInstance().mostrarAlertaInfoemacion(500);
+                    SuperKinalAlert.getInstance().mostrarAlertaInformacion(500);
                     stage.menuClienteView();
                 }else{
                     stage.menuClienteView();
