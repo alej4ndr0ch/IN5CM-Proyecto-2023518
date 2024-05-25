@@ -5,23 +5,26 @@
  */
 package org.alejandrocuxun.models;
 
+import java.sql.Date;
+import java.sql.Time;
+
 /**
  *
  * @author aleja
  */
 public class Facturas {
     int facturaId;
-    int fecha;
-    int hora;
-    int clienteId;
-    int empleadoId;
-    int total;
+    Date fecha;
+    Time hora;
+    String clienteId;
+    String empleadoId;
+    double total;
     
     public Facturas(){
         
     }
 
-    public Facturas(int facturaId, int fecha, int hora, int clienteId, int empleadoId, int total) {
+    public Facturas(int facturaId, Date fecha, Time hora, String clienteId, String empleadoId, double total) {
         this.facturaId = facturaId;
         this.fecha = fecha;
         this.hora = hora;
@@ -29,7 +32,7 @@ public class Facturas {
         this.empleadoId = empleadoId;
         this.total = total;
     }
-
+    
     public int getFacturaId() {
         return facturaId;
     }
@@ -38,43 +41,43 @@ public class Facturas {
         this.facturaId = facturaId;
     }
 
-    public int getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(int fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public int getHora() {
+    public Time getHora() {
         return hora;
     }
 
-    public void setHora(int hora) {
+    public void setHora(Time hora) {
         this.hora = hora;
     }
 
-    public int getClienteId() {
+    public String getClienteId() {
         return clienteId;
     }
 
-    public void setClienteId(int clienteId) {
+    public void setClienteId(String clienteId) {
         this.clienteId = clienteId;
     }
 
-    public int getEmpleadoId() {
+    public String getEmpleadoId() {
         return empleadoId;
     }
 
-    public void setEmpleadoId(int empleadoId) {
+    public void setEmpleadoId(String empleadoId) {
         this.empleadoId = empleadoId;
     }
 
-    public int getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 

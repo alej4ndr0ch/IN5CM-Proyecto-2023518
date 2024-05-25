@@ -5,20 +5,22 @@
  */
 package org.alejandrocuxun.models;
 
+import java.sql.Date;
+
 /**
  *
  * @author aleja
  */
 public class Compras {
    private int compraId;
-   private int fechaCompra;
+   private Date fechaCompra;
    private double totalCompra;
    
    public void Compras(){
        
    }
 
-    public Compras(int compraId, int fechaCompra, double totalCompra) {
+    public Compras(int compraId, Date fechaCompra, double totalCompra) {
         this.compraId = compraId;
         this.fechaCompra = fechaCompra;
         this.totalCompra = totalCompra;
@@ -32,11 +34,11 @@ public class Compras {
         this.compraId = compraId;
     }
 
-    public int getFechaCompra() {
+    public Date getFechaCompra() {
         return fechaCompra;
     }
 
-    public void setFechaCompra(int fechaCompra) {
+    public void setFechaCompra(Date fechaCompra) {
         this.fechaCompra = fechaCompra;
     }
 

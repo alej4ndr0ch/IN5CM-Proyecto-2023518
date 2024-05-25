@@ -27,7 +27,7 @@ public class SuperKinalAlert {
         return instance;
     }
     
-    public void mostrarAlertaInfoemacion(int code){
+    public void mostrarAlertaInformacion(int code){
         if(code == 400){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Confirmacion Registro");

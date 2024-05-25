@@ -16,7 +16,7 @@ import java.sql.SQLException;
 public class Conexion {
     private static Conexion instance;
     
-    private String jdbcurl = "jdbc:mysql://localhost:admin/superkinalEjercicioDB?serverTimezone=GMT-6&useSSL=false";
+    private String url = "jdbc:mysql://localhost:3306/superkinalDB?serverTimezone=GMT-6&&useSSL=false";
     private String user = "root";
     private String password = "admin";
     
@@ -35,11 +35,7 @@ public class Conexion {
         return instance;
     }
     
-    public Connection obtenetConexion() throws SQLException{
-        return DriverManager.getConnection(jdbcurl, user, password);
-    }
-
-    public Connection obtenerConexion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Connection obtenerConexion() throws SQLException{
+        return DriverManager.getConnection(url, user, password);
     }
 }

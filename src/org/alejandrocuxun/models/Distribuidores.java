@@ -12,20 +12,20 @@ package org.alejandrocuxun.models;
 public class Distribuidores {
     private int distribuidorId;
     private String nombreDistribuidor;
-    private String descripcionDistribuidor;
-    private int nitDistribuidor;
-    private int Telefono;
+    private String direccionDistribuidor;
+    private String nitDistribuidor;
+    private int telefono;
     private String web;
 
     public Distribuidores() {
     }
 
-    public Distribuidores(int distribuidorId, String nombreDistribuidor, String descripcionDistribuidor, int nitDistribuidor, int Telefono, String web) {
+    public Distribuidores(int distribuidorId, String nombreDistribuidor, String direccionDistribuidor, String nitDistribuidor, int telefono, String web) {
         this.distribuidorId = distribuidorId;
         this.nombreDistribuidor = nombreDistribuidor;
-        this.descripcionDistribuidor = descripcionDistribuidor;
+        this.direccionDistribuidor = direccionDistribuidor;
         this.nitDistribuidor = nitDistribuidor;
-        this.Telefono = Telefono;
+        this.telefono = telefono;
         this.web = web;
     }
 
@@ -45,28 +45,28 @@ public class Distribuidores {
         this.nombreDistribuidor = nombreDistribuidor;
     }
 
-    public String getDescripcionDistribuidor() {
-        return descripcionDistribuidor;
+    public String getDireccionDistribuidor() {
+        return direccionDistribuidor;
     }
 
-    public void setDescripcionDistribuidor(String descripcionDistribuidor) {
-        this.descripcionDistribuidor = descripcionDistribuidor;
+    public void setDireccionDistribuidor(String descripcionDistribuidor) {
+        this.direccionDistribuidor = descripcionDistribuidor;
     }
 
-    public int getNitDistribuidor() {
+    public String getNitDistribuidor() {
         return nitDistribuidor;
     }
 
-    public void setNitDistribuidor(int nitDistribuidor) {
+    public void setNitDistribuidor(String nitDistribuidor) {
         this.nitDistribuidor = nitDistribuidor;
     }
 
     public int getTelefono() {
-        return Telefono;
+        return telefono;
     }
 
-    public void setTelefono(int Telefono) {
-        this.Telefono = Telefono;
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 
     public String getWeb() {
@@ -79,6 +79,6 @@ public class Distribuidores {
 
     @Override
     public String toString() {
-        return "Distribuidores{" + "distribuidorId=" + distribuidorId + ", nombreDistribuidor=" + nombreDistribuidor + ", descripcionDistribuidor=" + descripcionDistribuidor + ", nitDistribuidor=" + nitDistribuidor + ", Telefono=" + Telefono + ", web=" + web + '}';
+        return "Distribuidores{" + "distribuidorId=" + distribuidorId + ", nombreDistribuidor=" + nombreDistribuidor + ", descripcionDistribuidor=" + direccionDistribuidor + ", nitDistribuidor=" + nitDistribuidor + ", telefono=" + telefono + ", web=" + web + '}';
     }
 }

@@ -5,6 +5,8 @@
  */
 package org.alejandrocuxun.models;
 
+import java.sql.Date;
+
 /**
  *
  * @author aleja
@@ -13,14 +15,14 @@ public class Promociones {
     int promocionId;
     int precioPromocion;
     String descripcionPromocion;
-    int fechaInicio;
-    int fechaFinalizacion;
-    int productoId;
+    Date fechaInicio;
+    Date fechaFinalizacion;
+    String productoId;
 
     public Promociones() {
     }
 
-    public Promociones(int promocionId, int precioPromocion, String descripcionPromocion, int fechaInicio, int fechaFinalizacion, int productoId) {
+    public Promociones(int promocionId, int precioPromocion, String descripcionPromocion, Date fechaInicio, Date fechaFinalizacion, String productoId) {
         this.promocionId = promocionId;
         this.precioPromocion = precioPromocion;
         this.descripcionPromocion = descripcionPromocion;
@@ -57,27 +59,27 @@ public class Promociones {
         this.descripcionPromocion = descripcionPromocion;
     }
 
-    public int getFechaInicio() {
+    public Date getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(int fechaInicio) {
+    public void setFechaInicio(Date fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public int getFechaFinalizacion() {
+    public Date getFechaFinalizacion() {
         return fechaFinalizacion;
     }
 
-    public void setFechaFinalizacion(int fechaFinalizacion) {
+    public void setFechaFinalizacion(Date fechaFinalizacion) {
         this.fechaFinalizacion = fechaFinalizacion;
     }
 
-    public int getProductoId() {
+    public String getProductoId() {
         return productoId;
     }
 
-    public void setProductoId(int productoId) {
+    public void setProductoId(String productoId) {
         this.productoId = productoId;
     }
 

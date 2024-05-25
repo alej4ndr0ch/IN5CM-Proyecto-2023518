@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import org.alejandrocuxun.dao.Conexion;
 import org.alejandrocuxun.dto.ClienteDTO;
@@ -42,30 +43,35 @@ public class FormClienteController implements Initializable {
     
     @FXML
     public void handleButtonAction(ActionEvent event){
-        if(event.getSource() == btnCancelar){
-            stage.menuClienteView();
-            ClienteDTO.getClienteDTO().setCliente(null);
-        }else if(event.getSource() == btnGuardar){
+        if(event.getSource() == btnGuardar){
             if(op == 1){
-                if(!tfNombre.getText().equals("") && tfApellido.getText().equals("") && tfDireccion.getText().equals("")){
-                    agregarCliente();
-                    SuperKinalAlert.getInstance().mostrarAlertaInfoemacion(400);
+                if(!tfNombre.getText().equals("") && !tfApellido.getText().equals("") && !tfDireccion.getText().equals("")){
+                    agregarClientes();
+                    SuperKinalAlert.getInstance().mostrarAlertaInformacion(400);
                     stage.menuClienteView();
                 }else{
-                    SuperKinalAlert.getInstance().mostrarAlertaInfoemacion(600);
+                    SuperKinalAlert.getInstance().mostrarAlertaInformacion(600);
+                    tfNombre.requestFocus();
+                }  
+                
+            }else if(op == 2){
+                if(!tfNombre.getText().equals("") && !tfApellido.getText().equals("") && !tfDireccion.getText().equals("")){
+                    if(SuperKinalAlert.getInstance().mostrarAlertaConfirmacion(505).get() == ButtonType.OK){
+                        editarClientes();
+                        SuperKinalAlert.getInstance().mostrarAlertaInformacion(500);
+                        ClienteDTO.getClienteDTO().setCliente(null);
+                        stage.menuClienteView();
+                    }else{
+                        stage.menuClienteView();
+                    }
+                }else{
+                    SuperKinalAlert.getInstance().mostrarAlertaInformacion(600);
                     tfNombre.requestFocus();
                 }
-            }else if(op == 2){
-                if(!tfNombre.getText().equals("") && tfApellido.getText().equals("") && tfDireccion.getText().equals("")){
-                    editarCliente();
-                    ClienteDTO.getClienteDTO().setCliente(null);
-                    SuperKinalAlert.getInstance().mostrarAlertaInfoemacion(500);
-                    stage.menuClienteView();
-                }else{
-                    stage.menuClienteView();
-                }
-                           
             }
+        }else if(event.getSource() == btnCancelar){
+            stage.menuClienteView();
+            ClienteDTO.getClienteDTO().setCliente(null);
         }
     }
     
@@ -89,7 +95,7 @@ public class FormClienteController implements Initializable {
         tfNit.setText(cliente.getNit());
     }
     
-    public void agregarCliente(){
+    public void agregarClientes(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
             String sql = "call sp_AgregarClientes(?, ?, ?, ?, ?)";
@@ -113,9 +119,10 @@ public class FormClienteController implements Initializable {
                 System.out.println(e.getMessage());
             }
         }
+        op = 1;
     }
     
-    public void editarCliente(){
+    public void editarClientes(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
             String sql = "CALL sp_EditarClientes(?, ?, ?, ?, ?, ?)";

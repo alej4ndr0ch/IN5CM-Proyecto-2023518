@@ -30,7 +30,7 @@ import org.alejandrocuxun.systems.Main;
 import org.alejandrocuxun.utils.SuperKinalAlert;
 import org.alejandrocuxun.controllers.FormClienteController;
 
-/**
+/** 
  * FXML Controller class
  *
  * @author informatica
@@ -50,14 +50,14 @@ public class MenuClientesController implements Initializable {
     TableColumn colClienteId, colNombre, colApellido, colTelefono, colDireccion, colNit;
     
     @FXML
-    Button btnBack, btnAgregar, btnEditar, btnEliminar, btnBuscar;
+    Button btnRegresar, btnAgregar, btnEditar, btnEliminar, btnBuscar;
     
     @FXML
     TextField tfCliendeId;
     
     @FXML
     public void handleButtonAction(ActionEvent event){
-        if(event.getSource() == btnBack){
+        if(event.getSource() == btnRegresar){
             stage.menuPrincipalView();
         }else if(event.getSource() == btnAgregar){
             stage.formClienteView(1);
@@ -66,20 +66,17 @@ public class MenuClientesController implements Initializable {
             stage.formClienteView(2);
         }else if(event.getSource() == btnEliminar){
             if(SuperKinalAlert.getInstance().mostrarAlertaConfirmacion(404).get() == ButtonType.OK){
-                eliminarCliente(((Cliente)tblClientes.getSelectionModel().getSelectedItem()).getClienteId());
+                eliminarClientes(((Cliente)tblClientes.getSelectionModel().getSelectedItem()).getClienteId());
                 cargarLista();
             }
         }else if(event.getSource() == btnBuscar){
             tblClientes.getItems().clear();
             if(tfCliendeId.getText().equals("")){
-                
                 cargarLista();
             }else{
-            
             op = 3;
             cargarLista();
-            }
-            
+            } 
         }
     }
     
@@ -93,10 +90,10 @@ public class MenuClientesController implements Initializable {
     
     public void cargarLista(){
         if(op == 3){
-           tblClientes.getItems().add(buscarCliente());
+           tblClientes.getItems().add(buscarClientes());
            op = 0; 
         }else{
-           tblClientes.setItems(listarCliente()); 
+           tblClientes.setItems(listarClientes()); 
         }
         
         colClienteId.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("clienteId"));
@@ -107,7 +104,9 @@ public class MenuClientesController implements Initializable {
         colNit.setCellValueFactory(new PropertyValueFactory<Cliente, String>("nit"));
     }
     
-    public ObservableList<Cliente> listarCliente(){
+    
+    
+    public ObservableList<Cliente> listarClientes(){
         ArrayList<Cliente> clientes = new ArrayList<>();
         
         try{
@@ -147,7 +146,7 @@ public class MenuClientesController implements Initializable {
         return FXCollections.observableList(clientes);
     }
     
-    public void eliminarCliente(int cliId){
+    public void eliminarClientes(int cliId){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
             String sql = "CALL sp_EliminarClientes(?)";
@@ -169,11 +168,11 @@ public class MenuClientesController implements Initializable {
         }
     }
     
-    public Cliente buscarCliente(){
+    public Cliente buscarClientes(){
         Cliente cliente = null;
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "call sp_buscarCliente(?)";
+            String sql = "call sp_BuscarClientes(?)";
             statement = conexion.prepareStatement(sql);
             statement.setInt(1, Integer.parseInt(tfCliendeId.getText()));
             resultSet = statement.executeQuery();

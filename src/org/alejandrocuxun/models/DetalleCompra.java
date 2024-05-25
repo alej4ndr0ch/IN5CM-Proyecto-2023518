@@ -11,7 +11,7 @@ package org.alejandrocuxun.models;
  */
 public class DetalleCompra {
     int detalleCompraId;
-    int Cantidad;
+    int cantidadCompra;
     int productoId;
     int compraId;
     
@@ -19,9 +19,9 @@ public class DetalleCompra {
     
     }
 
-    public DetalleCompra(int detalleCompraId, int Cantidad, int productoId, int compraId) {
+    public DetalleCompra(int detalleCompraId, int cantidadCompra, int productoId, int compraId) {
         this.detalleCompraId = detalleCompraId;
-        this.Cantidad = Cantidad;
+        this.cantidadCompra = cantidadCompra;
         this.productoId = productoId;
         this.compraId = compraId;
     }
@@ -34,12 +34,12 @@ public class DetalleCompra {
         this.detalleCompraId = detalleCompraId;
     }
 
-    public int getCantidad() {
-        return Cantidad;
+    public int getCantidadCompra() {
+        return cantidadCompra;
     }
 
-    public void setCantidad(int Cantidad) {
-        this.Cantidad = Cantidad;
+    public void setCantidadCompra(int cantidadCompra) {
+        this.cantidadCompra = cantidadCompra;
     }
 
     public int getProductoId() {
@@ -60,7 +60,7 @@ public class DetalleCompra {
 
     @Override
     public String toString() {
-        return "DetalleCompra{" + "detalleCompraId=" + detalleCompraId + ", Cantidad=" + Cantidad + ", productoId=" + productoId + ", compraId=" + compraId + '}';
+        return "DetalleCompra{" + "detalleCompraId=" + detalleCompraId + ", Cantidad=" + cantidadCompra + ", productoId=" + productoId + ", compraId=" + compraId + '}';
     }
     
     

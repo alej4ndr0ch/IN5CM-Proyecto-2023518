@@ -11,14 +11,14 @@ package org.alejandrocuxun.models;
  */
 public class DetalleFactura {
     int detalleFacturaId;
-    int facturaId;
-    int productoId;
+    String facturaId;
+    String productoId;
     
     public void DetalleFactura(){
         
     }
 
-    public DetalleFactura(int detalleFacturaId, int facturaId, int productoId) {
+    public DetalleFactura(int detalleFacturaId, String facturaId, String productoId) {
         this.detalleFacturaId = detalleFacturaId;
         this.facturaId = facturaId;
         this.productoId = productoId;
@@ -32,19 +32,19 @@ public class DetalleFactura {
         this.detalleFacturaId = detalleFacturaId;
     }
 
-    public int getFacturaId() {
+    public String getFacturaId() {
         return facturaId;
     }
 
-    public void setFacturaId(int facturaId) {
+    public void setFacturaId(String facturaId) {
         this.facturaId = facturaId;
     }
 
-    public int getProductoId() {
+    public String getProductoId() {
         return productoId;
     }
 
-    public void setProductoId(int productoId) {
+    public void setProductoId(String productoId) {
         this.productoId = productoId;
     }
 

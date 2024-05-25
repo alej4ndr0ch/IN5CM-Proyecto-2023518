@@ -11,7 +11,7 @@ package org.alejandrocuxun.models;
  */
 public class TicketSoporte {
     int ticketSoporteId;
-    String descripcion;
+    String descripcionTicket;
     String estatus;
     int clienteId;
     String cliente;
@@ -20,9 +20,9 @@ public class TicketSoporte {
     public TicketSoporte(){
     }
 
-    public TicketSoporte(int ticketSoporteId, String descripcion, String estatus, String cliente, int facturaId) {
+    public TicketSoporte(int ticketSoporteId, String descripcionTicket, String estatus, String cliente, int facturaId) {
         this.ticketSoporteId = ticketSoporteId;
-        this.descripcion = descripcion;
+        this.descripcionTicket = descripcionTicket;
         this.estatus = estatus;
         this.cliente = cliente;
         this.facturaId = facturaId;
@@ -37,11 +37,11 @@ public class TicketSoporte {
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return descripcionTicket;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescripcion(String descripcionTicket) {
+        this.descripcionTicket = descripcionTicket;
     }
 
     public String getEstatus() {
@@ -78,6 +78,6 @@ public class TicketSoporte {
 
     @Override
     public String toString() {
-        return "TicketSoporte{" + "ticketSoporteId=" + ticketSoporteId + ", descripcion=" + descripcion + ", estatus=" + estatus + ", clienteId=" + clienteId + ", cliente=" + cliente + ", facturaId=" + facturaId + '}';
+        return "TicketSoporte{" + "ticketSoporteId=" + ticketSoporteId + ", descripcion=" + descripcionTicket + ", estatus=" + estatus + ", clienteId=" + clienteId + ", cliente=" + cliente + ", facturaId=" + facturaId + '}';
     }
 }

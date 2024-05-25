@@ -5,30 +5,36 @@
  */
 package org.alejandrocuxun.models;
 
+import java.sql.Blob;
+
 /**
  *
  * @author aleja
  */
 public class Productos {
+    int productoId;
     String nombreProducto;
     String descripcionProducto;
     int cantidadProducto;
-    int precioVentaUnitaria;
-    int precioVentaMayor;
-    int precioCompra;
-    int distribuidorId;
-    int categoriaProductoId;
+    double precioVentaUnitaria;
+    double precioVentaMayor;
+    double precioCompra;
+    Blob imagenProducto;
+    String distribuidorId;
+    String categoriaProductoId;
 
     public Productos() {
     }
 
-    public Productos(String nombreProducto, String descripcionProducto, int cantidadProducto, int precioVentaUnitaria, int precioVentaMayor, int precioCompra, int distribuidorId, int categoriaProductoId) {
+    public Productos(int productoId, String nombreProducto, String descripcionProducto, int cantidadProducto, double precioVentaUnitaria, double precioVentaMayor, double precioCompra, Blob imagenProducto, String distribuidorId, String categoriaProductoId) {
+        this.productoId = productoId;
         this.nombreProducto = nombreProducto;
         this.descripcionProducto = descripcionProducto;
         this.cantidadProducto = cantidadProducto;
         this.precioVentaUnitaria = precioVentaUnitaria;
         this.precioVentaMayor = precioVentaMayor;
         this.precioCompra = precioCompra;
+        this.imagenProducto = imagenProducto;
         this.distribuidorId = distribuidorId;
         this.categoriaProductoId = categoriaProductoId;
     }
@@ -57,43 +63,59 @@ public class Productos {
         this.cantidadProducto = cantidadProducto;
     }
 
-    public int getPrecioVentaUnitaria() {
+    public double getPrecioVentaUnitaria() {
         return precioVentaUnitaria;
     }
 
-    public void setPrecioVentaUnitaria(int precioVentaUnitaria) {
+    public void setPrecioVentaUnitaria(double precioVentaUnitaria) {
         this.precioVentaUnitaria = precioVentaUnitaria;
     }
 
-    public int getPrecioVentaMayor() {
+    public double getPrecioVentaMayor() {
         return precioVentaMayor;
     }
 
-    public void setPrecioVentaMayor(int precioVentaMayor) {
+    public void setPrecioVentaMayor(double precioVentaMayor) {
         this.precioVentaMayor = precioVentaMayor;
     }
 
-    public int getPrecioCompra() {
+    public double getPrecioCompra() {
         return precioCompra;
     }
 
-    public void setPrecioCompra(int precioCompra) {
+    public void setPrecioCompra(double precioCompra) {
         this.precioCompra = precioCompra;
     }
 
-    public int getDistribuidorId() {
+    public int getProductoId() {
+        return productoId;
+    }
+
+    public void setProductoId(int productoId) {
+        this.productoId = productoId;
+    }
+
+    public Blob getImagenProducto() {
+        return imagenProducto;
+    }
+
+    public void setImagenProducto(Blob imagenProducto) {
+        this.imagenProducto = imagenProducto;
+    }
+
+    public String getDistribuidorId() {
         return distribuidorId;
     }
 
-    public void setDistribuidorId(int distribuidorId) {
+    public void setDistribuidorId(String distribuidorId) {
         this.distribuidorId = distribuidorId;
     }
 
-    public int getCategoriaProductoId() {
+    public String getCategoriaProductoId() {
         return categoriaProductoId;
     }
 
-    public void setCategoriaProductoId(int categoriaProductoId) {
+    public void setCategoriaProductoId(String categoriaProductoId) {
         this.categoriaProductoId = categoriaProductoId;
     }
 
