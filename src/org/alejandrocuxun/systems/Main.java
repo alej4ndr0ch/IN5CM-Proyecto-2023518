@@ -27,6 +27,8 @@ import org.alejandrocuxun.controllers.FormEmpleadosController;
 import org.alejandrocuxun.controllers.FormFacturasController;
 import org.alejandrocuxun.controllers.FormProductosController;
 import org.alejandrocuxun.controllers.FormPromocionesController;
+import org.alejandrocuxun.controllers.FormUsuarioController;
+import org.alejandrocuxun.controllers.LoginController;
 import org.alejandrocuxun.controllers.MenuCargosController;
 import org.alejandrocuxun.controllers.MenuCategoriaProductoController;
 import org.alejandrocuxun.controllers.MenuClientesController;
@@ -52,7 +54,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         this.stage = stage;
         stage.setTitle("Super Kinal App");
-        menuPrincipalView();
+        loginView();
         stage.show();
     }
     
@@ -289,6 +291,24 @@ public class Main extends Application {
             formAsignarEmpleadoView.setOp(op);
             formAsignarEmpleadoView.setStage(this);
         }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    public void loginView(){
+        try{
+            LoginController loginView = (LoginController) switchScene("LoginView.fxml", 500, 750);
+            loginView.setStage(this);
+        }catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    
+     public void formUsuarioView(){
+        try{
+            FormUsuarioController formUsuarioView = (FormUsuarioController) switchScene ("FormUsuarioView.fxml", 500, 750);
+            formUsuarioView.setStage(this);
+        }catch(Exception e) {
             System.out.println(e.getMessage());
         }
     }

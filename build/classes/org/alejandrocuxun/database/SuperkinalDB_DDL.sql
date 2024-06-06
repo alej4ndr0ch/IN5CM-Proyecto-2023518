@@ -1,9 +1,8 @@
-drop database if exists SuperKinalDB;
+drop database if exists superkinadb;
 
-create database SuperKinalDB;
+create database superkinadb;
 
-Use SuperKinalDB;
-
+Use superkinadb;
 -- ********************************** TABLA ********************************** --
 create table Clientes(
     clienteId int not null auto_increment,
@@ -26,16 +25,16 @@ create table Empleados(
     empleadoId int not null auto_increment,
     nombreEmpleado varchar(30) not null,
     apellidoEmpleado varchar(30) not null,
-    sueldo decimal(10.2) not null,
     horaEntrada time,
     horaSalida time,
     cargoId int not null,
     encargadoId int,
+    sueldo decimal(10.2) not null,
     primary key pk_empleadoId(empleadoId),
     constraint FK_encargadoId_Empleados foreign key (encargadoId)
-	references Empleados(empleadoId),
+		references Empleados(empleadoId),
     constraint FK_cargoId_Empleados foreign key (cargoId)
-	references Cargos(cargoId)
+		references Cargos(cargoId)
 );
 
 create table Distribuidores(
@@ -63,12 +62,12 @@ create table productos(
     precioVentaUnitaria decimal not null,
     precioVentaMayor decimal not null,
     precioCompra decimal not null,
-    imagenProducto longblob,
+    imagenProducto blob,
     distribuidorId int not null,
     categoriaProductoId int not null,
     primary key pk_productoId(productoId),
     constraint pk_Productos_Distribuidores foreign key(distribuidorId)
-	references Distribuidores(distribuidorId),
+		references Distribuidores(distribuidorId),
     constraint pk_Productos_categoriaProductos foreign key(categoriaProductoId)
         references categoriaProductos(categoriaProductoId)
 );
@@ -93,9 +92,9 @@ create table DetalleFaturas(
     productoId int not null,
     primary key pk_detalleFacturaId(detalleFacturaId),
     constraint fk_DetalleFactura_Facturas foreign key(facturaId)
-	references Facturas(facturaId),
+		references Facturas(facturaId),
     constraint fk_DetalleFacturas_Productos foreign key(productoId)
-	references Productos(productoId)
+		references Productos(productoId)
 );
 
 create table TicketSoporte(
@@ -106,9 +105,9 @@ create table TicketSoporte(
     facturaId int,
     primary key pk_ticketSoporteId(ticketSoporteId),
     constraint fk_TicketSoporte_Clientes foreign key(clienteId)
-	references Clientes(clienteId),
+		references Clientes(clienteId),
     constraint fk_TicketSoporte_Facturas foreign key(facturaId)
-	references Facturas(facturaId)
+		references Facturas(facturaId)
 );
 
 create table Promociones(
@@ -120,7 +119,7 @@ create table Promociones(
     productoId int not null,
     primary key pk_promocionId(promocionId),
     constraint fk_Promociones_Productos foreign key (productoId)
-	references Productos(productoId)
+		references Productos(productoId)
 );
 
 create table Compras(
@@ -139,5 +138,30 @@ create table detalleCompras(
     constraint fk_detalleCompras_Productos foreign key(productoId)
         references Productos(productoId),
     constraint fk_detalleCompras_Compras foreign key(compraId)
-	references Compras(compraId)
+		references Compras(compraId)
 );
+
+CREATE TABLE NivelesAcceso (
+    nivelAccesoId INT NOT NULL AUTO_INCREMENT,
+    nivelAcceso VARCHAR(40) NOT NULL,
+    PRIMARY KEY (nivelAccesoId)
+);
+
+CREATE TABLE Usuarios (
+    usuarioId INT NOT NULL AUTO_INCREMENT,
+    usuario VARCHAR(30) NOT NULL,
+    contrasenia VARCHAR(100) NOT NULL,
+    nivelAccesoId INT NOT NULL,
+    empleadoId INT NOT NULL,
+    PRIMARY KEY (usuarioId),
+    CONSTRAINT FK_Usuarios_NivelesAcceso FOREIGN KEY (nivelAccesoId)
+        REFERENCES NivelesAcceso(nivelAccesoId),
+    CONSTRAINT FK_Usuarios_Empleados FOREIGN KEY (empleadoId)
+        REFERENCES Empleados(empleadoId)
+);
+
+INSERT INTO NivelesAcceso(nivelAcceso)VALUES 
+('Admin'),
+('User');
+
+set global time_zone = '-6:00';

@@ -28,6 +28,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import org.alejandrocuxun.dao.Conexion;
 import org.alejandrocuxun.dto.FacturasDTO;
 import org.alejandrocuxun.models.Facturas;
+import org.alejandrocuxun.reports.GenerarReporte;
 import org.alejandrocuxun.systems.Main;
 import org.alejandrocuxun.utils.SuperKinalAlert;
 
@@ -51,7 +52,7 @@ public class MenuFacturasController implements Initializable {
     TableColumn colFacturaId, colFecha, colHora, colClienteId, colEmpleadoId, colTotal;
     
     @FXML
-    Button btnRegresar, btnAgregar, btnEditar, btnEliminar, btnBuscar, btnAgregarDF;
+    Button btnRegresar, btnAgregar, btnEditar, btnEliminar, btnBuscar, btnAgregarDF, btnFinalizarFactura;
     
     @FXML
     TextField tfFacturaId;
@@ -82,6 +83,8 @@ public class MenuFacturasController implements Initializable {
             }
         }else if(event.getSource() == btnAgregarDF){
             stage.formDetalleFacturaView(1);
+        }else if(event.getSource() == btnFinalizarFactura){
+            GenerarReporte.getInstance().generarFactura(Integer.parseInt(tfFacturaId.getText()));
         }
     }
     

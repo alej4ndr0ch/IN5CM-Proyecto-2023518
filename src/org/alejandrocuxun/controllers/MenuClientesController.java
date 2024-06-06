@@ -29,6 +29,7 @@ import org.alejandrocuxun.models.Cliente;
 import org.alejandrocuxun.systems.Main;
 import org.alejandrocuxun.utils.SuperKinalAlert;
 import org.alejandrocuxun.controllers.FormClienteController;
+import org.alejandrocuxun.reports.GenerarReporte;
 
 /** 
  * FXML Controller class
@@ -50,7 +51,7 @@ public class MenuClientesController implements Initializable {
     TableColumn colClienteId, colNombre, colApellido, colTelefono, colDireccion, colNit;
     
     @FXML
-    Button btnRegresar, btnAgregar, btnEditar, btnEliminar, btnBuscar;
+    Button btnRegresar, btnAgregar, btnEditar, btnEliminar, btnBuscar, btnFinalizarClientes;
     
     @FXML
     TextField tfCliendeId;
@@ -77,6 +78,8 @@ public class MenuClientesController implements Initializable {
             op = 3;
             cargarLista();
             } 
+        }else if(event.getSource() == btnFinalizarClientes){
+            GenerarReporte.getInstance().generarCliente(Integer.parseInt(tfCliendeId.getText()));
         }
     }
     
