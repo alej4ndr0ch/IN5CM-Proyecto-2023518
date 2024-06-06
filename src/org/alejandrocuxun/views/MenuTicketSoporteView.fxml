@@ -45,8 +45,14 @@
          </children>
       </GridPane>
       <Button fx:id="btnRegresar" layoutX="23.0" layoutY="679.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="189.0" text="Regresar" />
+<<<<<<< HEAD
       <ComboBox fx:id="cmbCliente" layoutX="450.0" layoutY="181.0" prefHeight="30.0" prefWidth="251.0" />
       <ComboBox fx:id="cmbFactura" layoutX="766.0" layoutY="181.0" prefHeight="30.0" prefWidth="251.0" />
       <ComboBox fx:id="cmbEstatus" layoutX="14.0" layoutY="519.0" prefHeight="30.0" prefWidth="251.0" />
+=======
+      <ComboBox layoutX="461.0" layoutY="183.0" prefHeight="25.0" prefWidth="209.0" />
+      <ComboBox layoutX="795.0" layoutY="183.0" prefHeight="25.0" prefWidth="209.0" />
+      <ComboBox layoutX="19.0" layoutY="519.0" prefHeight="25.0" prefWidth="209.0" />
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
    </children>
 </AnchorPane>

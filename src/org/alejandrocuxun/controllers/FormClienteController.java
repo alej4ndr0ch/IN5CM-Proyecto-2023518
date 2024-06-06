@@ -45,12 +45,18 @@ public class FormClienteController implements Initializable {
     public void handleButtonAction(ActionEvent event){
         if(event.getSource() == btnGuardar){
             if(op == 1){
+<<<<<<< HEAD
                 if(!tfNombre.getText().equals("") && !tfApellido.getText().equals("") && !tfDireccion.getText().equals("")){
                     agregarClientes();
+=======
+                if(!tfNombre.getText().equals("") && tfApellido.getText().equals("") && tfDireccion.getText().equals("")){
+                    agregarCliente();
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
                     SuperKinalAlert.getInstance().mostrarAlertaInformacion(400);
                     stage.menuClienteView();
                 }else{
                     SuperKinalAlert.getInstance().mostrarAlertaInformacion(600);
+<<<<<<< HEAD
                     tfNombre.requestFocus();
                 }  
                 
@@ -68,6 +74,20 @@ public class FormClienteController implements Initializable {
                     SuperKinalAlert.getInstance().mostrarAlertaInformacion(600);
                     tfNombre.requestFocus();
                 }
+=======
+                    tfNombre.requestFocus();
+                }
+            }else if(op == 2){
+                if(!tfNombre.getText().equals("") && tfApellido.getText().equals("") && tfDireccion.getText().equals("")){
+                    editarCliente();
+                    ClienteDTO.getClienteDTO().setCliente(null);
+                    SuperKinalAlert.getInstance().mostrarAlertaInformacion(500);
+                    stage.menuClienteView();
+                }else{
+                    stage.menuClienteView();
+                }
+                           
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
             }
         }else if(event.getSource() == btnCancelar){
             stage.menuClienteView();

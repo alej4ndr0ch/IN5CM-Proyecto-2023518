@@ -17,9 +17,15 @@
             <Image url="@../images/FormCompra.png" />
          </image>
       </ImageView>
+<<<<<<< HEAD
       <TextField fx:id="tfCompraId" layoutX="52.0" layoutY="238.0" prefHeight="30.0" prefWidth="384.0" />
       <TextField fx:id="tfFecha" layoutX="52.0" layoutY="327.0" prefHeight="30.0" prefWidth="384.0" />
       <GridPane layoutX="96.0" layoutY="462.0" prefHeight="172.0" prefWidth="297.0">
+=======
+      <TextField fx:id="tfCompraId" layoutX="52.0" layoutY="237.0" prefHeight="30.0" prefWidth="318.0" />
+      <TextField fx:id="tfFecha" layoutX="52.0" layoutY="319.0" prefHeight="30.0" prefWidth="318.0" />
+      <GridPane layoutX="95.0" layoutY="534.0" prefHeight="126.0" prefWidth="232.0">
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -28,8 +34,13 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
+<<<<<<< HEAD
             <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="93.0" prefWidth="139.0" text="Guardar" />
             <Button fx:id="btnRegresar" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="93.0" prefWidth="139.0" text="Regresar" GridPane.columnIndex="1" />
+=======
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="106.0" text="Guardar" />
+            <Button fx:id="btnRegresar" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="106.0" text="Regresar" GridPane.columnIndex="1" />
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
          </children>
       </GridPane>
    </children>

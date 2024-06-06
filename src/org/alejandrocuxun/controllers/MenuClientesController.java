@@ -27,11 +27,16 @@ import org.alejandrocuxun.dao.Conexion;
 import org.alejandrocuxun.dto.ClienteDTO;
 import org.alejandrocuxun.models.Cliente;
 import org.alejandrocuxun.systems.Main;
+<<<<<<< HEAD
 import org.alejandrocuxun.utils.SuperKinalAlert;
 import org.alejandrocuxun.controllers.FormClienteController;
 import org.alejandrocuxun.reports.GenerarReporte;
 
 /** 
+=======
+import org.alejandrocuxun.utils.SuperKinalAlert;    
+/**
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
  * FXML Controller class
  *
  * @author informatica

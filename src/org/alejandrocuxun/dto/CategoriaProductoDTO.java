@@ -9,7 +9,11 @@ import org.alejandrocuxun.models.CategoriaProducto;
 
 /**
  *
+<<<<<<< HEAD
  * @author aleja
+=======
+ * @author informatica
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
  */
 public class CategoriaProductoDTO {
     private static CategoriaProductoDTO instance;

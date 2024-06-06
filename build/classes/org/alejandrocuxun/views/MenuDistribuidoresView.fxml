@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
+<<<<<<< HEAD
 <AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alejandrocuxun.controllers.MenuDistribuidoresController">
    <children>
       <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
@@ -55,5 +56,45 @@
             <Button fx:id="btnEditar" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="106.0" prefWidth="226.0" text="Editar" GridPane.rowIndex="1" />
          </children>
       </GridPane>
+=======
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="org.alejandrocuxun.controllers.MenuDistribuidoresController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Menu%20Distribuidores.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfDistribuidorId" layoutX="780.0" layoutY="210.0" prefHeight="30.0" prefWidth="397.0" />
+      <TextField fx:id="tfNombreDistribuidor" layoutX="780.0" layoutY="301.0" prefHeight="30.0" prefWidth="397.0" />
+      <TextField fx:id="tfDescripcionDistribuidor" layoutX="709.0" layoutY="390.0" prefHeight="45.0" prefWidth="468.0" />
+      <TextField fx:id="tfNit" layoutX="706.0" layoutY="492.0" prefHeight="30.0" prefWidth="209.0" />
+      <TextField fx:id="tfTelefono" layoutX="964.0" layoutY="492.0" prefHeight="30.0" prefWidth="202.0" />
+      <TextField fx:id="tfWeb" layoutX="767.0" layoutY="579.0" prefHeight="30.0" prefWidth="353.0" />
+      <GridPane layoutX="39.0" layoutY="624.0" prefHeight="107.0" prefWidth="241.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="75.0" prefWidth="112.0" text="Guardar" />
+            <Button fx:id="btnVaciar" layoutX="10.0" layoutY="26.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="112.0" text="Vaciar" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnRegresar" layoutX="358.0" layoutY="665.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="276.0" text="Regresar" />
+      <TableView fx:id="tblDistribuidores" layoutX="27.0" layoutY="175.0" prefHeight="431.0" prefWidth="651.0">
+        <columns>
+          <TableColumn fx:id="colDistribuidorId" prefWidth="61.0" text="Distribuidores ID" />
+          <TableColumn fx:id="colNombreDistribuidor" prefWidth="165.0" text="Nombre Distribuidor" />
+            <TableColumn fx:id="colDescripcionDistribuidor" prefWidth="184.0" text="Descripcion Distribuidor" />
+            <TableColumn fx:id="colNit" prefWidth="55.0" text="Nit" />
+            <TableColumn fx:id="colTelefono" prefWidth="94.0" text="Telefono" />
+            <TableColumn fx:id="colWeb" prefWidth="91.0" text="Web" />
+        </columns>
+      </TableView>
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
    </children>
 </AnchorPane>

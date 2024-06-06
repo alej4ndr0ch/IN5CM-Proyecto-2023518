@@ -18,17 +18,26 @@
             <Image url="@../images/MenúFacturasView.png" />
          </image>
       </ImageView>
+<<<<<<< HEAD
       <TextField fx:id="tfFacturaId" layoutX="824.0" layoutY="197.0" prefHeight="32.0" prefWidth="334.0" />
       <TextField fx:id="tfHora" layoutX="824.0" layoutY="303.0" prefHeight="32.0" prefWidth="334.0" />
       <TextField fx:id="tfFecha" layoutX="824.0" layoutY="416.0" prefHeight="32.0" prefWidth="334.0" />
       <TextField fx:id="tfTotal" layoutX="824.0" layoutY="514.0" prefHeight="32.0" prefWidth="334.0" />
       <TableView fx:id="tblFacturas" layoutX="31.0" layoutY="181.0" prefHeight="495.0" prefWidth="728.0">
+=======
+      <TextField fx:id="tfFacturaId" layoutX="898.0" layoutY="197.0" prefHeight="32.0" prefWidth="260.0" />
+      <TextField fx:id="tfHora" layoutX="898.0" layoutY="303.0" prefHeight="32.0" prefWidth="260.0" />
+      <TextField fx:id="tfFecha" layoutX="898.0" layoutY="416.0" prefHeight="32.0" prefWidth="260.0" />
+      <TextField fx:id="tfTotal" layoutX="898.0" layoutY="514.0" prefHeight="32.0" prefWidth="260.0" />
+      <TableView fx:id="tblFacturas" layoutX="52.0" layoutY="149.0" prefHeight="488.0" prefWidth="706.0">
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
         <columns>
           <TableColumn fx:id="colFacturaId" prefWidth="69.0" text="Factura Id" />
           <TableColumn fx:id="colFecha" prefWidth="186.0" text="Fecha" />
             <TableColumn fx:id="colHora" prefWidth="154.0" text="Hora" />
             <TableColumn fx:id="colTotal" prefWidth="150.0" text="Total" />
             <TableColumn fx:id="colEmpleadoId" prefWidth="84.0" text="EmpleadoId" />
+<<<<<<< HEAD
             <TableColumn fx:id="colClienteId" prefWidth="84.0" text="ClienteId" />
         </columns>
       </TableView>
@@ -36,6 +45,13 @@
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+=======
+            <TableColumn fx:id="colClienteId" prefWidth="62.0" text="ClienteId" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="892.0" layoutY="601.0" prefHeight="71.0" prefWidth="250.0">
+        <columnConstraints>
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -43,6 +59,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
+<<<<<<< HEAD
             <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="111.0" text="Agregar" GridPane.columnIndex="1" />
             <Button fx:id="btnEditar" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="111.0" text="Editar" GridPane.columnIndex="2" />
             <Button fx:id="btnEliminar" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="111.0" text="Eliminar" GridPane.columnIndex="3" />
@@ -60,5 +77,12 @@
             </ImageView>
          </graphic>
       </Button>
+=======
+            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="56.0" prefWidth="118.0" text="Guardar" />
+            <Button fx:id="btnVaciar" layoutX="10.0" layoutY="18.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="118.0" text="Vaciar" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnRegresar" layoutX="67.0" layoutY="672.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="316.0" text="Regresar" />
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
    </children>
 </AnchorPane>

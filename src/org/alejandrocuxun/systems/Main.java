@@ -87,8 +87,13 @@ public class Main extends Application {
     
     public void menuClienteView(){
          try{
+<<<<<<< HEAD
             MenuClientesController menuClientesView = (MenuClientesController)switchScene("MenuClientesView.fxml", 1200, 750);
             menuClientesView.setStage(this);
+=======
+            MenuClientesController menuClienteView = (MenuClientesController)switchScene("MenuClienteView.fxml", 1200, 750);
+            menuClienteView.setStage(this);
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
@@ -140,6 +145,18 @@ public class Main extends Application {
         }
     }
     
+<<<<<<< HEAD
+=======
+    public void menuDetalleCompraView(){
+        try{
+            MenuDetalleCompraController menuDetalleCompraView = (MenuDetalleCompraController)switchScene("MenuDetalleCompraView.fxml", 1200,750);
+            menuDetalleCompraView.setStage(this);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
     public void menuCategoriaProductoView(){
         try{
             MenuCategoriaProductoController menuCategoriaProductoView = (MenuCategoriaProductoController)switchScene("MenuCategoriaProductoView.fxml", 1200,750);
@@ -169,7 +186,11 @@ public class Main extends Application {
     
     public void menuProductosView(){
         try{
+<<<<<<< HEAD
             MenuProductosController menuProductosView = (MenuProductosController)switchScene("MenuProductosView.fxml", 1300,900);
+=======
+            MenuProductosController menuProductosView = (MenuProductosController)switchScene("MenuProductosView.fxml", 1200,750);
+>>>>>>> e2186e805825bd595c799466183545218cd6968b
             menuProductosView.setStage(this);
         }catch(Exception e){
             System.out.println(e.getMessage());
